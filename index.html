@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>ВКС</title>
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="css/styles.css">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+</head>
+<body>
+	<div class="wrapper">
+		<div class="header">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-6">
+						<div class="logo">
+							<img src="img/logo.png">
+							<span class="head-stud">УЧЕБНО-ИНФОРМАЦИОННЫЙ ЦЕНТР</span>
+						</div>
+					</div>	
+					<div class="col-md-6 button-phone">	
+						<button class="button-deploy"><i class="far fa-edit"></i> Подать заявку</button>
+						<span class="phone"><img src="img/call-answer.png" alt="Call"><span>8 (351)</span>202-02-23</span>
+					</div>
+				</div>
+			</div>	
+		</div>
+		<div class="nav">
+			<div class="container nav-container">
+				<div>
+					<ul>
+						<li><a href="#">Главная</a></li>
+						<li class="dropdown"><a href="javascript:void(0)" class="dropbtn">Курсы<i class="fa fa-caret-down"></i></a></li>
+							<div class="dropdown-content">
+								<a href="#">Медицина</a>
+								<a href="#">Фармация</a>
+								<a href="#">Стоматология</a>
+								<a href="#">Кадровое дело</a>
+								<a href="#">Воспитатель</a>
+								<a href="#">Курсы БДД</a>
+							</div>
+						</li>	
+						<li><a href="#">О центре</a></li>
+						<li><a href="#">Документы</a></li>
+						<li><a href="#">Контакты</a></li>
+					</ul>
+				</div>
+				<div class="enter">
+					<span><a href="#"><i class="fas fa-sign-in-alt"></i>Вход в учебный центр</a></span>
+				</div>	
+			</div>
+		</div>
+		<div class="background-img-1"></div>
+		<div class="main-intro">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-7">
+						<h1>Центр дистанционного образования</h1>
+						<p class="h1-text">Инновационные методы повышения квалификации<br>и профессиональной переподготовки</p>
+					</div>
+					<div class="col-md-5">
+						<ul class="advantages">
+							<li><span class="white-board"><img src="img/white-board.png" alt="WB"></span>345 курсов в каталоге</li>
+							<li><span class="certificate"><img src="img/certificate.png" alt="CF"></span>Диплом государственного образца</li>
+							<li><span class="sharing"><img src="img/sharing.png" alt="SH"></span>Без отвлечения от основной работы</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="main-menu">
+			<div class="container">
+				<div class="tab-menu">
+					<button class="tablinks" id="defaultOpen" onclick="education(event,'Medicine')">
+						<i class="fas fa-toggle-on"></i>Медицина
+					</button>
+					<button class="tablinks" onclick="education(event, 'Pharma')">
+						<i class="fas fa-toggle-on"></i>Фармация
+					</button>
+					<button class="tablinks" onclick="education(event, 'Stomatology')">
+						<i class="fas fa-toggle-on"></i>Стоматология
+					</button>
+					<button class="tablinks" onclick="education(event, 'Management')">
+						<i class="fas fa-toggle-on"></i>Кадровое дело
+					</button>
+					<button class="tablinks" onclick="education(event, 'Teaching')">
+						<i class="fas fa-toggle-on"></i>Воспитатель
+					</button>
+					<button class="tablinks" onclick="education(event, 'Courses')">
+						<i class="fas fa-toggle-on"></i>Курсы БДД
+					</button>
+				</div>
+				<div id="Medicine" class="tabcontent">
+					<p>В нашем каталоге более 300 курсов. Воспользуйтесь быстрым подбором, чтобы найти курсы по интересующему вас направлению:</p>
+					<div class="container">
+						<div id="chose-destiny" class="row">
+							<div class="col-md-4">
+								<form action="/action_page.php">
+									<label for="check-education" id="check1">Ваше образование:</label>
+									<select id="check1-1" name="check-education">
+										<option value="Высшее образование">Высшее образование</option>
+										<option value="Среднее образование">Среднее образование</option>
+										<option value="Детский сад">Детский сад</option>
+									</select>
+								</form>
+							</div>
+							<div class="col-md-4">
+								<form action="/action_page.php">
+									<label for="check-type" id="check2">Тип курса:</label>
+									<select id="check2-2" name="check-type">
+										<option value="Повышение квалификации">Повышение квалификации</option>
+										<option value="Понижение квалификации">Понижение квалификации</option>
+										<option value="Разжалование в дворники">Разжалование в дворники</option>
+									</select>
+								</form>
+							</div>
+							<div class="col-md-4">
+								<form action="/action_page.php">
+									<label for="check-branch" id="check3">Специальность:</label>
+									<select id="check3-3" name="check-branch">
+										<option value="Все специальности">Все специальности</option>
+										<option value="Знаю но не умею">Знаю но не умею</option>
+										<option value="Умею но не знаю">Умею но не знаю</option>
+									</select>
+								</form>
+							</div>
+	<!-- Как сделать кнопку с изменяемым содержимым??????????????????????????? -->
+							<button class="show-kurs" value="Показать # курсов">Показать # курсов</button>
+	<!-- Как сделать кнопку с изменяемым содержимым??????????????????????????? -->
+						</div>
+					</div>
+				</div>
+				<div id="Pharma" class="tabcontent">
+					<p>В нашем каталоге более 300 курсов. Воспользуйтесь быстрым подбором, чтобы найти курсы по интересующему вас направлению:</p>
+					<div class="container">
+						<div id="chose-destiny" class="row">
+							<div class="col-md-4">
+								<form action="/action_page.php">
+									<label for="check-education" id="check1">Ваше образование:</label>
+									<select id="check1-1" name="check-education">
+										<option value="Высшее образование">Высшее образование</option>
+										<option value="Среднее образование">Среднее образование</option>
+										<option value="Детский сад">Детский сад</option>
+									</select>
+								</form>
+							</div>
+							<div class="col-md-4">
+								<form action="/action_page.php">
+									<label for="check-type" id="check2">Тип курса:</label>
+									<select id="check2-2" name="check-type">
+										<option value="Повышение квалификации">Повышение квалификации</option>
+										<option value="Понижение квалификации">Понижение квалификации</option>
+										<option value="Разжалование в дворники">Разжалование в дворники</option>
+									</select>
+								</form>
+							</div>
+							<div class="col-md-4">
+								<form action="/action_page.php">
+									<label for="check-branch" id="check3">Специальность:</label>
+									<select id="check3-3" name="check-branch">
+										<option value="Все специальности">Все специальности</option>
+										<option value="Знаю но не умею">Знаю но не умею</option>
+										<option value="Умею но не знаю">Умею но не знаю</option>
+									</select>
+								</form>
+							</div>
+	<!-- Как сделать кнопку с изменяемым содержимым??????????????????????????? -->
+							<button class="show-kurs" value="Показать # курсов">Показать # курсов</button>
+	<!-- Как сделать кнопку с изменяемым содержимым??????????????????????????? -->
+						</div>
+					</div>
+				</div>
+				<div id="Stomatology" class="tabcontent">
+					<p>В нашем каталоге более 300 курсов. Воспользуйтесь быстрым подбором, чтобы найти курсы по интересующему вас направлению:</p>
+					<div class="container">
+						<div id="chose-destiny" class="row">
+							<div class="col-md-4">
+								<form action="/action_page.php">
+									<label for="check-education" id="check1">Ваше образование:</label>
+									<select id="check1-1" name="check-education">
+										<option value="Высшее образование">Высшее образование</option>
+										<option value="Среднее образование">Среднее образование</option>
+										<option value="Детский сад">Детский сад</option>
+									</select>
+								</form>
+							</div>
+							<div class="col-md-4">
+								<form action="/action_page.php">
+									<label for="check-type" id="check2">Тип курса:</label>
+									<select id="check2-2" name="check-type">
+										<option value="Повышение квалификации">Повышение квалификации</option>
+										<option value="Понижение квалификации">Понижение квалификации</option>
+										<option value="Разжалование в дворники">Разжалование в дворники</option>
+									</select>
+								</form>
+							</div>
+							<div class="col-md-4">
+								<form action="/action_page.php">
+									<label for="check-branch" id="check3">Специальность:</label>
+									<select id="check3-3" name="check-branch">
+										<option value="Все специальности">Все специальности</option>
+										<option value="Знаю но не умею">Знаю но не умею</option>
+										<option value="Умею но не знаю">Умею но не знаю</option>
+									</select>
+								</form>
+							</div>
+	<!-- Как сделать кнопку с изменяемым содержимым??????????????????????????? -->
+							<button class="show-kurs" value="Показать # курсов">Показать # курсов</button>
+	<!-- Как сделать кнопку с изменяемым содержимым??????????????????????????? -->
+						</div>
+					</div>
+				</div>
+				<div id="Management" class="tabcontent">
+					<p>В нашем каталоге более 300 курсов. Воспользуйтесь быстрым подбором, чтобы найти курсы по интересующему вас направлению:</p>
+					<div class="container">
+						<div id="chose-destiny" class="row">
+							<div class="col-md-4">
+								<form action="/action_page.php">
+									<label for="check-education" id="check1">Ваше образование:</label>
+									<select id="check1-1" name="check-education">
+										<option value="Высшее образование">Высшее образование</option>
+										<option value="Среднее образование">Среднее образование</option>
+										<option value="Детский сад">Детский сад</option>
+									</select>
+								</form>
+							</div>
+							<div class="col-md-4">
+								<form action="/action_page.php">
+									<label for="check-type" id="check2">Тип курса:</label>
+									<select id="check2-2" name="check-type">
+										<option value="Повышение квалификации">Повышение квалификации</option>
+										<option value="Понижение квалификации">Понижение квалификации</option>
+										<option value="Разжалование в дворники">Разжалование в дворники</option>
+									</select>
+								</form>
+							</div>
+							<div class="col-md-4">
+								<form action="/action_page.php">
+									<label for="check-branch" id="check3">Специальность:</label>
+									<select id="check3-3" name="check-branch">
+										<option value="Все специальности">Все специальности</option>
+										<option value="Знаю но не умею">Знаю но не умею</option>
+										<option value="Умею но не знаю">Умею но не знаю</option>
+									</select>
+								</form>
+							</div>
+	<!-- Как сделать кнопку с изменяемым содержимым??????????????????????????? -->
+							<button class="show-kurs" value="Показать # курсов">Показать # курсов</button>
+	<!-- Как сделать кнопку с изменяемым содержимым??????????????????????????? -->
+						</div>
+					</div>
+				</div>
+				<div id="Teaching" class="tabcontent">
+					<p>В нашем каталоге более 300 курсов. Воспользуйтесь быстрым подбором, чтобы найти курсы по интересующему вас направлению:</p>
+					<div class="container">
+						<div id="chose-destiny" class="row">
+							<div class="col-md-4">
+								<form action="/action_page.php">
+									<label for="check-education" id="check1">Ваше образование:</label>
+									<select id="check1-1" name="check-education">
+										<option value="Высшее образование">Высшее образование</option>
+										<option value="Среднее образование">Среднее образование</option>
+										<option value="Детский сад">Детский сад</option>
+									</select>
+								</form>
+							</div>
+							<div class="col-md-4">
+								<form action="/action_page.php">
+									<label for="check-type" id="check2">Тип курса:</label>
+									<select id="check2-2" name="check-type">
+										<option value="Повышение квалификации">Повышение квалификации</option>
+										<option value="Понижение квалификации">Понижение квалификации</option>
+										<option value="Разжалование в дворники">Разжалование в дворники</option>
+									</select>
+								</form>
+							</div>
+							<div class="col-md-4">
+								<form action="/action_page.php">
+									<label for="check-branch" id="check3">Специальность:</label>
+									<select id="check3-3" name="check-branch">
+										<option value="Все специальности">Все специальности</option>
+										<option value="Знаю но не умею">Знаю но не умею</option>
+										<option value="Умею но не знаю">Умею но не знаю</option>
+									</select>
+								</form>
+							</div>
+	<!-- Как сделать кнопку с изменяемым содержимым??????????????????????????? -->
+							<button class="show-kurs" value="Показать # курсов">Показать # курсов</button>
+	<!-- Как сделать кнопку с изменяемым содержимым??????????????????????????? -->
+						</div>
+					</div>
+				</div>
+				<div id="Courses" class="tabcontent">
+					<p>В нашем каталоге более 300 курсов. Воспользуйтесь быстрым подбором, чтобы найти курсы по интересующему вас направлению:</p>
+					<div class="container">
+						<div id="chose-destiny" class="row">
+							<div class="col-md-4">
+								<form action="/action_page.php">
+									<label for="check-education" id="check1">Ваше образование:</label>
+									<select id="check1-1" name="check-education">
+										<option value="Высшее образование">Высшее образование</option>
+										<option value="Среднее образование">Среднее образование</option>
+										<option value="Детский сад">Детский сад</option>
+									</select>
+								</form>
+							</div>
+							<div class="col-md-4">
+								<form action="/action_page.php">
+									<label for="check-type" id="check2">Тип курса:</label>
+									<select id="check2-2" name="check-type">
+										<option value="Повышение квалификации">Повышение квалификации</option>
+										<option value="Понижение квалификации">Понижение квалификации</option>
+										<option value="Разжалование в дворники">Разжалование в дворники</option>
+									</select>
+								</form>
+							</div>
+							<div class="col-md-4">
+								<form action="/action_page.php">
+									<label for="check-branch" id="check3">Специальность:</label>
+									<select id="check3-3" name="check-branch">
+										<option value="Все специальности">Все специальности</option>
+										<option value="Знаю но не умею">Знаю но не умею</option>
+										<option value="Умею но не знаю">Умею но не знаю</option>
+									</select>
+								</form>
+							</div>
+	<!-- Как сделать кнопку с изменяемым содержимым??????????????????????????? -->
+							<button class="show-kurs" value="Показать # курсов">Показать # курсов</button>
+	<!-- Как сделать кнопку с изменяемым содержимым??????????????????????????? -->
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="background-img-2"></div>
+		<div class="study">
+			<div class="learn-with"><span>Учиться с ВКС - удобно</span></div>
+			<hr class="orange-stripe">
+			<div class="container">	
+				<div class="row">
+					<div class="col-lg-4 padding-fix">
+						<div class="comfortably">
+							<div>
+								<span class="comfortably-img"><img src="img/student.png" alt="Money"></span>
+							</div>
+							<span>Специальный учебный кабинет</span>
+							<p>Весь учебный процесс происходит в специальном кабинтете онлайн. Вы будете слушать лекции, получать и выполнять домашние задания в удобном формате.</p>
+						</div>
+					</div>
+					<div class="col-lg-4 padding-fix">
+						<div class="comfortably">
+							<div>
+								<span class="comfortably-img"><img src="img/download.png" alt="Money"></span>
+							</div>
+							<span>Доступ к учебным материалам 24/7</span>
+							<p>Учебные материалы доступны вам в любое время. Также нет ограничения по времени просмотра лекций и выполнения домашних заданий - учитесь, когда вам удобно, соблюдая конечные сроки сдачи.</p>
+						</div>
+					</div>
+					<div class="col-lg-4 padding-fix">
+						<div class="comfortably">
+							<div>
+								<span class="comfortably-img"><img src="img/money.png" alt="Money"></span>
+							</div>
+							<span>Без дополнительных затрат</span>
+<!-- как обратиться к спану без назначения ему класса?/ -->
+							<p>При дистанционном обучении вы не платите за проезд и проживание. Вы можете учиться из любой точки мира в комфортной для вас обстановке.</p>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="qwerty"><button class="button-all">Все курсы учебного центра ВКС</button></div>
+		</div>
+		<div class="background-img-3"></div>
+		<div class="background-img-4"></div>
+
+
+	</div>	
+
+<script src="js/script.js"></script>	
+<script src="js/jquery-3.3.1.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+</body>
+</html>
